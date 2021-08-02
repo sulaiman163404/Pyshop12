@@ -26,6 +26,9 @@
     <a href="{% url 'create-product' %}"><img style="width: 20px; height: auto;" src="{% static 'img/plus.png' %}"></a>
       {% endif %}
 <!--      end permission to create-->
+
+      <a href="{% url 'cart_detail' %}"><img style="width: 30px; height: auto;" src="{% static 'img/carts.png' %}"></a>
+
 <!--      search-->
     <form class="d-flex" method="get" action="{% url 'search' %}">
       <input name="q" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     #libs
     'crispy_forms',
+    'cart',
 
     # my apps
     'product',
@@ -71,11 +72,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processor.cart_total_amount',
             ],
         },
     },
 ]
 
+CART_SESSION_ID = 'cart'
 WSGI_APPLICATION = 'shop.wsgi.application'
 
 
@@ -141,3 +144,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/account/login/'
+
